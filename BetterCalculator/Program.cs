@@ -1,12 +1,11 @@
 ﻿
-
-
-
-
-
-
-
-
+/*Luke Groesbeck
+Spring 2026
+RCET 2265
+Project BetterCalculator
+Computer Fundamentals and Introduction to Programming
+https://github.com/groeluke/BetterCalculator.git
+*/
 
 namespace BetterCalculator
 {
