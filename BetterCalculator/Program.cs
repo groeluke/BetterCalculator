@@ -14,35 +14,41 @@ namespace BetterCalculator
         static void Main(string[] args)
         {
             string userInput = "";
-            int firstNumber, secondNumber;
+            int result = 0;
+            bool isValid = false;
+            string message = "";
 
-            Console.WriteLine("Please enter a number:");
-            userInput = Console.ReadLine();
-            firstNumber = int.Parse(userInput);
-            Console.WriteLine($"You entered: {firstNumber}");
-
-            Console.WriteLine("Please enter a number:");
-            userInput = Console.ReadLine();
-            secondNumber = int.Parse(userInput);
-            Console.WriteLine($"You entered: {secondNumber}");
-
-            Console.WriteLine("Chose an operation to perform: 1 addtion, 2 subtraction, 3 multiplication, 4 division");
-            userInput = Console.ReadLine();
-            switch (userInput)
+            do
             {
-                case "1":
-                    Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-                    break;
-                case "2":
-                    Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-                    break;
-                case "3":
-                    Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-                    break;
-                case "4":
-                    Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-                    break;
-            }
+
+                Console.WriteLine("Please enter two numbers. Enter \"Q\" at any time to quit.");
+                userInput = Console.ReadLine();
+                Console.WriteLine($"Choose a Number: \"{userInput}\"");
+
+                try
+                {
+                    result = int.Parse(userInput);
+                    message = $"Good job! {result} is a number";
+                    isValid = true;
+                }
+                catch (Exception ex)
+                {
+                    if (userInput == "Q" || userInput == "q")
+                    {
+                        message = "Have a wonderful day";
+                        isValid = true;
+                    }
+                    else
+                    {
+                        message = $" You entered {userInput}, please enter a while number.";
+                    }
+                }
+
+                Console.WriteLine(message);
+            } while (isValid == false);
+
+            Console.Read();
+
         }
     }
 }
