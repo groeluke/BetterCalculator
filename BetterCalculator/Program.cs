@@ -40,7 +40,7 @@ namespace BetterCalculator
                     }
                     else
                     {
-                        message = $" You entered {userInput}, please enter a while number.";
+                        message = $" You entered \"{userInput}\", please enter a real number.";
                     }
                 }
 
