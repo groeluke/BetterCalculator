@@ -97,14 +97,9 @@ namespace BetterCalculator
                 if (input!.Equals("Q", StringComparison.OrdinalIgnoreCase))
                     return "Q";
                 //validating user input for operation
-                if (input == "1" || input == "2" || input == "3" || input == "4")
-                {
-                    Console.WriteLine($"You entered \"{input}\"");
-                    return input;
-                }
 
                 Console.WriteLine($"You entered \"{input}\"");
-                // loops back (no extra error text — matches example)
+                // loops back
             }
         }
  
