@@ -13,6 +13,8 @@ namespace BetterCalculator
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Black;
             while (true)
             {
                 Console.WriteLine("Please enter two numbers. Enter \"Q\" at any time to quit."); 
@@ -64,8 +66,6 @@ namespace BetterCalculator
 
                 if (int.TryParse(input, out int number)) 
                 {
-                    Console.WriteLine($"You entered \"{input}\"");
-                    //validating user input for number
                     return number;
                 }
 
@@ -81,10 +81,10 @@ namespace BetterCalculator
             {
                 //option prompt for operations
                 Console.WriteLine("Choose one of the following options:");
-                Console.WriteLine("1. Add");
-                Console.WriteLine("2. Subtract");
-                Console.WriteLine("3. Multiply");
-                Console.WriteLine("4. Divide");
+                Console.WriteLine("1. Add +");
+                Console.WriteLine("2. Subtract -");
+                Console.WriteLine("3. Multiply *");
+                Console.WriteLine("4. Divide /");
 
                 //user input for operation
                 Console.Write("Your choice: ");
